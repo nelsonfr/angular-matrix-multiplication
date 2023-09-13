@@ -10,6 +10,18 @@ export class Matrix {
     }
   
     update(width: number, height: number): void {
-        this.data = new Array(height).fill(0).map(() => new Array(width).fill(0));
+        this.width = width;
+        this.height = height;
+        const newMatrix = [];
+
+        for (let i = 0; i < height; i++) {
+          const newRow = [];
+          for (let j = 0; j < width; j++) {
+            newRow.push(0); // You can initialize with any value you prefer
+          }
+          newMatrix.push(newRow);
+        }
+
+        this.data = newMatrix;
     }
   }

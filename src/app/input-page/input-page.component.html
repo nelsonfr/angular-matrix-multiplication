@@ -3,11 +3,11 @@
     <div class="row">
         <div class="form-group">
             <label for="optA1">A:</label>
-            <select id="optA1" class="small-select">
-                <option *ngFor="let opt of sizeOpts">{{ opt }}</option>
+            <select id="optA1" class="small-select" [(ngModel)]="matrixAWidth" name="matrixAWidth" (change)="resetMatrixA()">
+                <option *ngFor="let opt of sizeOpts" [value]="opt">{{ opt }}</option>
             </select>
             x
-            <select id="optA2" class="small-select">
+            <select id="optA2" class="small-select" [(ngModel)]="matrixAHeight" name="matrixAHeight" (change)="resetMatrixA()" >
                 <option *ngFor="let opt of sizeOpts" [value]="opt">{{ opt }}</option>
             </select>
         </div>
@@ -15,11 +15,11 @@
     <div class="row">
         <div class="form-group">
             <label for="optB1">B:</label>
-            <select id="optB1" class="small-select">
-                <option *ngFor="let opt of sizeOpts">{{ opt }}</option>
+            <select id="optB1" class="small-select" [(ngModel)]="matrixBWidth" name="matrixBWidth" (change)="resetMatrixB()">
+                <option *ngFor="let opt of sizeOpts" [value]="opt">{{ opt }}</option>
             </select>
             x
-            <select id="optB2" class="small-select">
+            <select id="optB2" class="small-select" [(ngModel)]="matrixBHeight" name="matrixBHeight" (change)="resetMatrixB()">
                 <option *ngFor="let opt of sizeOpts" [value]="opt">{{ opt }}</option>
             </select>
         </div>

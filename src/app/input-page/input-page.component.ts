@@ -8,13 +8,20 @@ import { Matrix } from '../models/matrix';
 })
 export class InputPageComponent {
   sizeOpts:number[] = [1,2,3,4,5];
-  matrixA:Matrix = new Matrix(2,3);
-  matrixB:Matrix = new Matrix(4,9);
+  matrixAWidth:number = 1;
+  matrixAHeight:number = 1;
+  matrixBWidth:number = 1;
+  matrixBHeight:number = 1;
+  matrixA:Matrix = new Matrix(this.matrixAWidth,this.matrixAHeight);
+  matrixB:Matrix = new Matrix(this.matrixBWidth,this.matrixBHeight);
  
   
-  /**
-   *
-   */
+  resetMatrixA(){
+    this.matrixA.update(this.matrixAWidth, this.matrixAHeight);
+  }
   
+  resetMatrixB(){
+    this.matrixB.update(this.matrixBWidth, this.matrixBHeight);
+  }
 
 }

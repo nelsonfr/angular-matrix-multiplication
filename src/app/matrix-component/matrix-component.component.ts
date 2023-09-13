@@ -15,7 +15,6 @@ export class MatrixComponentComponent {
     if (!value) {
       this.matrixData[i][j] = 0;
     }
-    console.log(this.matrixData);
   }
 
   trackByFn(index, item) {
