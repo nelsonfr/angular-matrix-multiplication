@@ -6,6 +6,9 @@ import { InputPageComponent } from './input-page/input-page.component';
 import { OutputPageComponent } from './output-page/output-page.component';
 import { MatrixComponentComponent } from './matrix-component/matrix-component.component';
 import { FormsModule} from  '@angular/forms'; 
+import {HttpClientModule} from '@angular/common/http'
+import { MatrixService } from './services/matrix.service';
+import { DataSharingService } from './services/data-sharing.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,10 @@ import { FormsModule} from  '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MatrixService, DataSharingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

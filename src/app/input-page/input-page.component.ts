@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Matrix } from '../models/matrix';
+import { MatrixService } from '../services/matrix.service';
+import { DataSharingService } from '../services/data-sharing.service';
 
 @Component({
   selector: 'app-input-page',
@@ -15,7 +17,9 @@ export class InputPageComponent {
   matrixA:Matrix = new Matrix(this.matrixAWidth,this.matrixAHeight);
   matrixB:Matrix = new Matrix(this.matrixBWidth,this.matrixBHeight);
  
-  
+  constructor(private matrixService:MatrixService, private dataSharingService:DataSharingService) {
+  }
+
   resetMatrixA(){
     this.matrixA.update(this.matrixAWidth, this.matrixAHeight);
   }
@@ -24,4 +28,12 @@ export class InputPageComponent {
     this.matrixB.update(this.matrixBWidth, this.matrixBHeight);
   }
 
+  onSubmit(){
+    debugger;
+      this.matrixService.multiply(this.matrixA, this.matrixB).subscribe(
+        (result) =>{
+          this.dataSharingService.setMatrixOperationData(result);
+        }
+      )    
+  }
 }

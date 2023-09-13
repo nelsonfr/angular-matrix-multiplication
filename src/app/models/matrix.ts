@@ -17,11 +17,12 @@ export class Matrix {
         for (let i = 0; i < height; i++) {
           const newRow = [];
           for (let j = 0; j < width; j++) {
-            newRow.push(0); // You can initialize with any value you prefer
+            newRow.push(0); 
           }
           newMatrix.push(newRow);
         }
 
         this.data = newMatrix;
+        console.log(this.data);
     }
   }
