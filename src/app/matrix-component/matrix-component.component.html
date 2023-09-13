@@ -1,0 +1,7 @@
+<div *ngIf="matrixData" class="matrix-container">
+    <div class="row-container" *ngFor="let row of matrixData;  trackBy: trackByFn; let i = index" >
+      <div class="col-container" *ngFor="let item of row; let j = index;trackBy: trackByFn; ">
+        <input type="number" [(ngModel)]="matrixData[i][j]" (blur)="validateInput(i, j)"/>
+      </div>
+    </div>
+</div>

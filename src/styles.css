@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 70%;;
+    padding: 0;
+    background-color: #d0d0d0; /* Use your preferred shade of grey here */
+  }
