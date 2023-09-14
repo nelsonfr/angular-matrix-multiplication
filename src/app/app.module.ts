@@ -9,6 +9,8 @@ import { FormsModule} from  '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import { MatrixService } from './services/matrix.service';
 import { DataSharingService } from './services/data-sharing.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DataSharingService } from './services/data-sharing.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [MatrixService, DataSharingService],
   bootstrap: [AppComponent]
