@@ -8,7 +8,6 @@ import { Matrix } from '../models/matrix';
 })
 export class MatrixComponentComponent {
   @Input() matrixData:number[][];
-  counter:number = 0;
 
   validateInput(i:number, j:number){   
     var value = this.matrixData[i][j];
@@ -19,9 +18,5 @@ export class MatrixComponentComponent {
 
   trackByFn(index, item) {
     return index; 
-  }
-
-  incr(){
-    return ++this.counter;
   }
 }

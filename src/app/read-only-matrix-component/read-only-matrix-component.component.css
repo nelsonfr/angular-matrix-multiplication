@@ -1,0 +1,15 @@
+.row-container {
+    display: flex;
+  }
+  
+  /* Style for each column container */
+  .col-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2px; /* Add spacing between columns */
+    text-align: center;
+  } 
+
+  .item{
+    width: 20px;
+  }

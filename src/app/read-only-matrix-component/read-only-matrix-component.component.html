@@ -1,0 +1,7 @@
+<div *ngIf="matrixData" class="matrix-container">
+    <div class="row-container" *ngFor="let row of matrixData; let i = index">
+      <div class="col-container" *ngFor="let item of row; let j = index">
+        <span class="item">{{matrixData[i][j]}}</span>
+      </div>
+    </div>
+</div>

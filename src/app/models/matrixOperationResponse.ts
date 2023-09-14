@@ -1,9 +1,9 @@
 import { Matrix } from "./matrix";
 
 export class MatrixOperationResponse{
-    matrixA:Matrix;
-    matrixB:Matrix;
-    result:Matrix;
+    public matrixA:Matrix;
+    public matrixB:Matrix;
+    public result:Matrix;
 
     /**
      *

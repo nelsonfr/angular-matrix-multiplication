@@ -1,0 +1,8 @@
+.row {
+    display: flex;
+    align-items: center; 
+}
+
+.output-page-container{
+    margin-top: 50px;
+}

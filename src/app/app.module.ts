@@ -11,13 +11,17 @@ import { MatrixService } from './services/matrix.service';
 import { DataSharingService } from './services/data-sharing.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { ReadOnlyMatrixComponentComponent } from './read-only-matrix-component/read-only-matrix-component.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ErrorInterceptor } from './error-interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputPageComponent,
     OutputPageComponent,
-    MatrixComponentComponent
+    MatrixComponentComponent,
+    ReadOnlyMatrixComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,13 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     RouterModule
   ],
-  providers: [MatrixService, DataSharingService],
+  providers: [MatrixService, 
+              DataSharingService,
+              {
+                provide: HTTP_INTERCEPTORS,
+                useClass: ErrorInterceptor,
+                multi: true
+              }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
