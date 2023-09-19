@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ReadOnlyMatrixComponentComponent {
   @Input() matrixData:number[][];
+  @Input() matrixName:string;
 }

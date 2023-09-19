@@ -1,22 +1,22 @@
-<div class="output-page-container">
+<div id="output-container" class="output-page-container">
     <div class="row">      
         <div class="col-md-1"> 
           <b>C=A&#xB7;B=</b>
         </div>
         <div class=col-md-3>
-            <app-read-only-matrix-component [matrixData]="dataResponse.matrixA.data"></app-read-only-matrix-component>
+            <app-read-only-matrix-component [matrixData]="dataResponse.matrixA.data" [matrixName]="'matrixA'"></app-read-only-matrix-component>
         </div>
         <div class="col-md-1">
             <b>&#xB7;</b>
         </div>
         <div class="col-md-3">
-            <app-read-only-matrix-component [matrixData]="dataResponse.matrixB.data"></app-read-only-matrix-component>
+            <app-read-only-matrix-component [matrixData]="dataResponse.matrixB.data" [matrixName]="'matrixB'"></app-read-only-matrix-component>
         </div>            
         <div class="col-md-1">
             <b>=</b>        
         </div>
         <div class="col-md-3">            
-            <app-read-only-matrix-component [matrixData]="dataResponse.result.data"></app-read-only-matrix-component>
+            <app-read-only-matrix-component [matrixData]="dataResponse.result.data" [matrixName]="'matrixC'"></app-read-only-matrix-component>
         </div>
     </div>
 </div>
