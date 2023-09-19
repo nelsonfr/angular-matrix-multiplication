@@ -3,24 +3,24 @@
         <div class="row">Select the matrix size:</div>
         <div class="row">
             <div class="form-group">
-                <label for="optA1">A:</label>
-                <select id="optA1" class="small-select" [(ngModel)]="matrixAHeight" name="matrixAHeight" (change)="resetMatrixA()">
+                <label for="matrixAHeight">A:</label>
+                <select id="matrixAHeight" class="small-select" [(ngModel)]="matrixAHeight" name="matrixAHeight" (change)="resetMatrixA()">
                     <option *ngFor="let opt of sizeOpts" [value]="opt">{{ opt }}</option>
                 </select>
                 x
-                <select id="optA2" class="small-select" [(ngModel)]="matrixAWidth" name="matrixAWidth" (change)="resetMatrixA()" >
+                <select id="matrixAWidth" class="small-select" [(ngModel)]="matrixAWidth" name="matrixAWidth" (change)="resetMatrixA()" >
                     <option *ngFor="let opt of sizeOpts" [value]="opt">{{ opt }}</option>
                 </select>
             </div>
         </div>
         <div class="row">
             <div class="form-group">
-                <label for="optB1">B:</label>
-                <select id="optB1" class="small-select" [(ngModel)]="matrixBHeight" name="matrixBHeight" (change)="resetMatrixB()">
+                <label for="matrixBHeight">B:</label>
+                <select id="matrixBHeight" class="small-select" [(ngModel)]="matrixBHeight" name="matrixBHeight" (change)="resetMatrixB()">
                     <option *ngFor="let opt of sizeOpts" [value]="opt">{{ opt }}</option>
                 </select>
                 x
-                <select id="optB2" class="small-select" [(ngModel)]="matrixBWidth" name="matrixBWidth" (change)="resetMatrixB()">
+                <select id="matrixBWidth" class="small-select" [(ngModel)]="matrixBWidth" name="matrixBWidth" (change)="resetMatrixB()">
                     <option *ngFor="let opt of sizeOpts" [value]="opt">{{ opt }}</option>
                 </select>
             </div>
@@ -29,12 +29,12 @@
         <div class="row">The first matrix:</div>
         <div class="row">
             <div class="col-md-1"><b>A=</b></div>
-            <div class="col-md-11"><app-matrix-component [matrixData]= "matrixA.data"></app-matrix-component></div>
+            <div class="col-md-11"><app-matrix-component [matrixData]= "matrixA.data" [matrixName]="'matrixA'"></app-matrix-component></div>
         </div>
         <div class="row">The second matrix:</div>
         <div class="row">
             <div class="col-md-1"><b>B=</b></div>
-            <div class="col-md-11"><app-matrix-component [matrixData]= "matrixB.data"></app-matrix-component></div>
+            <div class="col-md-11"><app-matrix-component [matrixData]= "matrixB.data" [matrixName]="'matrixB'"></app-matrix-component></div>
         </div>
         <br>
         <div class="row">

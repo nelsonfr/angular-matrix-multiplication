@@ -8,7 +8,7 @@ import { Matrix } from '../models/matrix';
 })
 export class MatrixComponentComponent {
   @Input() matrixData:number[][];
-
+  @Input() matrixName:string;
   validateInput(i:number, j:number){   
     var value = this.matrixData[i][j];
     if (!value) {
